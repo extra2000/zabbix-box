@@ -1,0 +1,3 @@
+[submodule "salt/roots/formulas/zabbix-formula"]
+	path = salt/roots/formulas/zabbix-formula
+	url = https://github.com/extra2000/zabbix-formula.git
