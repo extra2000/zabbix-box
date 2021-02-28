@@ -2,3 +2,4 @@
 vagrant/*
 !vagrant/examples
 salt/roots/pillar/zabbix.sls
+salt/roots/pillar/nginx.sls
