@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.1.0](https://github.com/extra2000/zabbix-box/compare/v1.0.0...v1.1.0) (2021-03-01)
+
+
+### Features
+
+* **submodule:** Add [nginx-formula v1.0.0](https://github.com/extra2000/nginx-formula/releases/tag/v1.0.0) ([3649935](https://github.com/extra2000/zabbix-box/commit/3649935f0f600be47f549f10a88f7365067088ea))
+* **submodule:** Update `zabbix-formula` to [v1.1.0](https://github.com/extra2000/zabbix-formula/releases/tag/v1.1.0) ([00d5c25](https://github.com/extra2000/zabbix-box/commit/00d5c259380c20de1bd9f217f277e0bf62e315a2))
+* **vagrant:** Add Vagrant files for Zabbix agent ([1829736](https://github.com/extra2000/zabbix-box/commit/182973632209e23d9d2d77cfc509a8a24cc1588d))
+
+
+### Documentations
+
+* **README:** Add instruction for creating Zabbix agent box ([158cfd7](https://github.com/extra2000/zabbix-box/commit/158cfd718634e816a1e1777a4d8a09ec4ea18b36))
+* **README:** Add instruction to configure NGINX for HTTPS and changed HTTP to HTTPS ([3e23556](https://github.com/extra2000/zabbix-box/commit/3e235569ba717f22b8b7e0fc38112375e33b6e8b))
+* **README:** Add instruction to configure Slack Notifications ([faa63a2](https://github.com/extra2000/zabbix-box/commit/faa63a29b74772b7bd8e85b85e11a9c0974ae9aa))
+* **README:** Add instruction to create NGINX pillar file ([a188bde](https://github.com/extra2000/zabbix-box/commit/a188bdee849d0df26132449a0a7e6e325b109b20))
+
+
+### Continuous Integrations
+
+* **AppVeyor:** Add instruction to create NGINX pillar file ([abcab99](https://github.com/extra2000/zabbix-box/commit/abcab9961f99cb66570c56012b79265fe23ac25b))
+
 ## 1.0.0 (2021-02-18)
 
 
