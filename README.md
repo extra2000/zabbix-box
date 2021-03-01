@@ -23,10 +23,10 @@ Copy example pillar file for Zabbix. Optionally you may want to edit the values 
 $ cp -v salt/roots/pillar/zabbix.sls.example salt/roots/pillar/zabbix.sls
 ```
 
-Copy vagrant file from `vagrant/examples/` and then create the vagrant box (you can change to `--provider=libvirt` if you want to use Libvirt provider):
+Copy vagrant file from `vagrant/examples/server/` and then create the vagrant box (you can change to `--provider=libvirt` if you want to use Libvirt provider):
 ```
 $ cp -v vagrant/examples/server/Vagrantfile.zabbix-box.fedora-33.x86_64.example vagrant/Vagrantfile.zabbix-box
-$ vagrant up --provider=virtualbox
+$ vagrant up --provider=virtualbox zabbix-box
 ```
 
 Provision the vagrant box:
@@ -47,3 +47,38 @@ To access Zabbix web, go to https://zabbix-box. Use the following default userna
 * Password: `zabbix`
 
 Go to [Configuration > Hosts](https://zabbix-box/hosts.php) and rename host from `Zabbix server` to `zabbix-server-pod`.
+
+
+## Creating Vagrant box for Agent, for testing purpose
+
+Copy vagrant file from `vagrant/examples/agent/` and then create the vagrant box (you can change to `--provider=libvirt` if you want to use Libvirt provider):
+```
+$ cp -v vagrant/examples/agent/Vagrantfile.zabbix-agent-box.fedora-33.x86_64.example vagrant/Vagrantfile.zabbix-agent-box
+$ vagrant up --provider=virtualbox zabbix-agent-box
+```
+
+Install Zabbix agent:
+```
+$ vagrant ssh zabbix-agent-box -- sudo salt-call state.sls zabbix.agent
+```
+
+Configure Zabbix agent at `/etc/zabbix_agentd.conf`:
+```
+Server=zabbix-box
+Hostname=zabbix-agent-box
+```
+
+Start Zabbix agent service:
+```
+$ sudo systemctl start zabbix-agent.service
+```
+
+Go to https://zabbix-box/hosts.php?form=create:
+
+* Host name: `zabbix-agent-box`
+* Groups: `Linux servers`
+* Interfaces:
+    * Type: `Agent`
+    * DNS Name: `zabbix-agent-box`
+    * Connect to: `DNS`
+    * Port: `10050`
