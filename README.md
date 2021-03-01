@@ -63,7 +63,7 @@ Install Zabbix agent:
 $ vagrant ssh zabbix-agent-box -- sudo salt-call state.sls zabbix.agent
 ```
 
-Configure Zabbix agent at `/etc/zabbix_agentd.conf`:
+SSH into `zabbix-agent-box` and configure Zabbix agent at `/etc/zabbix_agentd.conf`:
 ```
 Server=zabbix-box
 Hostname=zabbix-agent-box
@@ -76,13 +76,16 @@ $ sudo systemctl start zabbix-agent.service
 
 Go to https://zabbix-box/hosts.php?form=create:
 
-* Host name: `zabbix-agent-box`
-* Groups: `Linux servers`
-* Interfaces:
-    * Type: `Agent`
-    * DNS Name: `zabbix-agent-box`
-    * Connect to: `DNS`
-    * Port: `10050`
+* Under tab `Host`:
+    * Host name: `zabbix-agent-box`
+    * Groups: `Linux servers`
+    * Interfaces:
+        * Type: `Agent`
+        * DNS Name: `zabbix-agent-box`
+        * Connect to: `DNS`
+        * Port: `10050`
+* Under tab `Templates`:
+    * Add `Template OS Linux by Zabbix agent`, can be found in host group `Templates/Operating systems`.
 
 
 ## Slack Notifications
