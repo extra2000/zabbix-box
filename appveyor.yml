@@ -9,6 +9,7 @@ install:
   - git submodule update --init --recursive
 build_script:
   - cp -v salt/roots/pillar/zabbix.sls.example salt/roots/pillar/zabbix.sls
+  - cp -v salt/roots/pillar/nginx.sls.example salt/roots/pillar/nginx.sls
   - cp -v vagrant/examples/server/Vagrantfile.zabbix-box.fedora-33.x86_64.example vagrant/Vagrantfile.zabbix-box
   - sudo vagrant up --provider=libvirt zabbix-box
   - sudo vagrant ssh zabbix-box -- sudo salt-call state.highstate
