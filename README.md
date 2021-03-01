@@ -24,10 +24,10 @@ $ cp -v salt/roots/pillar/zabbix.sls.example salt/roots/pillar/zabbix.sls
 $ cp -v salt/roots/pillar/nginx.sls.example salt/roots/pillar/nginx.sls
 ```
 
-Copy vagrant file from `vagrant/examples/server/` and then create the vagrant box (you can change to `--provider=libvirt` if you want to use Libvirt provider):
+Copy vagrant file from `vagrant/examples/` and then create the vagrant box (you can change to `--provider=libvirt` if you want to use Libvirt provider):
 ```
-$ cp -v vagrant/examples/server/Vagrantfile.zabbix-box.fedora-33.x86_64.example vagrant/Vagrantfile.zabbix-box
-$ vagrant up --provider=virtualbox zabbix-box
+$ cp -v vagrant/examples/Vagrantfile.zabbix-box.fedora-33.x86_64.example vagrant/Vagrantfile.zabbix-box
+$ vagrant up --provider=virtualbox
 ```
 
 Provision the vagrant box:
@@ -50,29 +50,20 @@ To access Zabbix web, go to https://zabbix-box. Use the following default userna
 Go to [Configuration > Hosts](https://zabbix-box/hosts.php) and rename host from `Zabbix server` to `zabbix-server-pod`.
 
 
+## Slack Notifications
+
+Visit https://api.slack.com and then create an app with the following `Bot Token Scopes`:
+* `incoming-webhook`
+* `chat:write.public`
+* `chat:write.customize`
+* `chat:write`
+
+On your `zabbix-box` web-page, go to `Administration` > `Media types` > `Slack` and set `bot_token` value using your apps `OAuth Access Token` ("`xoxp-...`").
+
+
 ## Creating Vagrant box for Agent, for testing purpose
 
-Copy vagrant file from `vagrant/examples/agent/` and then create the vagrant box (you can change to `--provider=libvirt` if you want to use Libvirt provider):
-```
-$ cp -v vagrant/examples/agent/Vagrantfile.zabbix-agent-box.fedora-33.x86_64.example vagrant/Vagrantfile.zabbix-agent-box
-$ vagrant up --provider=virtualbox zabbix-agent-box
-```
-
-Install Zabbix agent:
-```
-$ vagrant ssh zabbix-agent-box -- sudo salt-call state.sls zabbix.agent
-```
-
-SSH into `zabbix-agent-box` and configure Zabbix agent at `/etc/zabbix_agentd.conf`:
-```
-Server=zabbix-box
-Hostname=zabbix-agent-box
-```
-
-Start Zabbix agent service:
-```
-$ sudo systemctl start zabbix-agent.service
-```
+Deploy `zabbix-agent-box` from [extra2000/zabbix-agent-box](https://github.com/extra2000/zabbix-agent-box).
 
 Go to https://zabbix-box/hosts.php?form=create:
 
@@ -86,14 +77,3 @@ Go to https://zabbix-box/hosts.php?form=create:
         * Port: `10050`
 * Under tab `Templates`:
     * Add `Template OS Linux by Zabbix agent`, can be found in host group `Templates/Operating systems`.
-
-
-## Slack Notifications
-
-Visit https://api.slack.com and then create an app with the following `Bot Token Scopes`:
-* `incoming-webhook`
-* `chat:write.public`
-* `chat:write.customize`
-* `chat:write`
-
-On your `zabbix-box` web-page, go to `Administration` > `Media types` > `Slack` and set `bot_token` value using your apps `OAuth Access Token` ("`xoxp-...`").
