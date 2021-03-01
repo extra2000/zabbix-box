@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/extra2000/zabbix-box/compare/v1.1.0...v1.1.1) (2021-03-01)
+
+
+### Documentations
+
+* **README:** Improve instructions and add instruction to create templates for the created Agent ([ef0071d](https://github.com/extra2000/zabbix-box/commit/ef0071d5d8ca739fa0e59178d4f8986d5445795c))
+
 ## [1.1.0](https://github.com/extra2000/zabbix-box/compare/v1.0.0...v1.1.0) (2021-03-01)
 
 
