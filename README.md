@@ -18,9 +18,10 @@ $ cd zabbix-box
 
 ## Creating Vagrant Box
 
-Copy example pillar file for Zabbix. Optionally you may want to edit the values in the `zabbix.sls`:
+Copy example pillar file for Zabbix and NGINX. Optionally you may want to edit the values in the pillar files:
 ```
 $ cp -v salt/roots/pillar/zabbix.sls.example salt/roots/pillar/zabbix.sls
+$ cp -v salt/roots/pillar/nginx.sls.example salt/roots/pillar/nginx.sls
 ```
 
 Copy vagrant file from `vagrant/examples/server/` and then create the vagrant box (you can change to `--provider=libvirt` if you want to use Libvirt provider):
