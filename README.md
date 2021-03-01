@@ -82,3 +82,14 @@ Go to https://zabbix-box/hosts.php?form=create:
     * DNS Name: `zabbix-agent-box`
     * Connect to: `DNS`
     * Port: `10050`
+
+
+## Slack Notifications
+
+Visit https://api.slack.com and then create an app with the following `Bot Token Scopes`:
+* `incoming-webhook`
+* `chat:write.public`
+* `chat:write.customize`
+* `chat:write`
+
+On your `zabbix-box` web-page, go to `Administration` > `Media types` > `Slack` and set `bot_token` value using your apps `OAuth Access Token` ("`xoxp-...`").
