@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.2.0](https://github.com/extra2000/zabbix-box/compare/v1.1.1...v1.2.0) (2021-03-05)
+
+
+### Features
+
+* **submodule:** Update `zabbix-formula` to [v1.2.0](https://github.com/extra2000/zabbix-formula/releases/tag/v1.2.0) ([06489f6](https://github.com/extra2000/zabbix-box/commit/06489f69abfbff35f31844fced7a487eb1011def))
+
+
+### Performance Improvements
+
+* **vagrant:** Increase RAM from 1GB to 1.5GB ([fe9463b](https://github.com/extra2000/zabbix-box/commit/fe9463b7a034d61c7a7109a8eee967c02f426a2d))
+
+
+### Code Refactoring
+
+* **vagrant:** Remove Vagrant files for Zabbix agent ([aa58c0b](https://github.com/extra2000/zabbix-box/commit/aa58c0bce0710fd32cd744088d848828127a0ace))
+* **vagrant:** Rename `vagrant/examples/server/` to `vagrant/examples/` ([f653aea](https://github.com/extra2000/zabbix-box/commit/f653aeae9a4114538640cd0025c7944166d63ed6))
+
+
+### Continuous Integrations
+
+* **AppVeyor:** Update instruction for copying Vagrant file ([a19504d](https://github.com/extra2000/zabbix-box/commit/a19504df2f4acbaf439fd4510e14948b9b72608f))
+
+
+### Documentations
+
+* **pillar/zabbix.sls.example:** Optimize container resources ([ef3cfdc](https://github.com/extra2000/zabbix-box/commit/ef3cfdc7fa923110698e516e9127f0e1acec4a24))
+* **README:** Add instructions for setting `guests` permissions ([3404de3](https://github.com/extra2000/zabbix-box/commit/3404de3eb46daffe139ce63b35cbf232ff19033e))
+* **README:** Simplify instructions for Zabbix agent and update other instructions ([2b10394](https://github.com/extra2000/zabbix-box/commit/2b1039489505889075a745f85f3a5011ea1740c4))
+
 ### [1.1.1](https://github.com/extra2000/zabbix-box/compare/v1.1.0...v1.1.1) (2021-03-01)
 
 
