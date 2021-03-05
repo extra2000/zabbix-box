@@ -77,3 +77,10 @@ Go to https://zabbix-box/hosts.php?form=create:
         * Port: `10050`
 * Under tab `Templates`:
     * Add `Template OS Linux by Zabbix agent`, can be found in host group `Templates/Operating systems`.
+
+
+## Allow Guests to view graphs and screens
+
+1. Go to `Administration` > `User groups` and select `Guests`.
+1. Go to `Permissions` tab and add a `Host Group` for example `Linux servers` with permission `Read`.
+1. Click `Add` and then click `Update`.
