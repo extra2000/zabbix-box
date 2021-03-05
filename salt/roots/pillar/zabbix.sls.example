@@ -31,9 +31,9 @@ zabbix:
       timeout: 4
       resources:
         requests:
-          memory: 256Mi
+          memory: 512Mi
         limits:
-          memory: 256Mi
+          memory: 512Mi
     web:
       database:
         host: postgres-pod.zabbixnet
@@ -51,9 +51,9 @@ zabbix:
         port: 10051
       resources:
         requests:
-          memory: 256Mi
+          memory: 512Mi
         limits:
-          memory: 256Mi
+          memory: 512Mi
     agent:
       server:
         ip: 127.0.0.1
@@ -69,9 +69,9 @@ zabbix:
       loglevel: 3
       resources:
         requests:
-          memory: 256Mi
+          memory: 64Mi
         limits:
-          memory: 256Mi
+          memory: 64Mi
     database:
       postgres:
         dbname: zabbix
