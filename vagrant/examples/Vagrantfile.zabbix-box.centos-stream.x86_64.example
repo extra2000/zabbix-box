@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
       override.vm.box_download_checksum = "58aac9f8fe0712b80a4fb415114e1d5c9777633c9dfa5c0333441cd7da830c0f"
       v.cpus = "2"
       v.cputopology sockets: "1", cores: "2", threads: "1"
-      v.memory = "1024"
+      v.memory = "1536"
       v.disk_bus = "virtio"
       v.nic_model_type = "virtio-net-pci"
       v.nested = false
@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
       v.name = "zabbix-box"
       v.gui = false
       v.cpus = "2"
-      v.memory = "1024"
+      v.memory = "1536"
       v.linked_clone = true
       v.customize ["modifyvm", :id, '--natdnshostresolver1', 'on']
       v.customize ['modifyvm', :id, '--graphicscontroller', 'vmsvga']
