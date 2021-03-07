@@ -46,6 +46,10 @@ Vagrant.configure("2") do |config|
       override.vm.provision 'reload'
     end
 
+    ## Uncomment these lines to forward port
+    # zabbix_box.vm.network "forwarded_port", guest: 10050, host: 10050, protocol: "tcp"
+    # zabbix_box.vm.network "forwarded_port", guest: 443, host: 8443, protocol: "tcp"
+
     zabbix_box.vm.synced_folder "salt/roots/", "/srv/", type: "rsync"
     zabbix_box.vm.synced_folder '.', '/vagrant', disabled: true
   end
