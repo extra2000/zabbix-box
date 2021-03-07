@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://github.com/extra2000/zabbix-box/compare/v1.2.0...v1.2.1) (2021-03-07)
+
+
+### Documentations
+
+* **vagrant:** Add comments for port forwarding ([0bf62a5](https://github.com/extra2000/zabbix-box/commit/0bf62a50348fe3bde33377ab4f4366f792fbfc8a))
+
 ## [1.2.0](https://github.com/extra2000/zabbix-box/compare/v1.1.1...v1.2.0) (2021-03-05)
 
 
