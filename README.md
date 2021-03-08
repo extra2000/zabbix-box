@@ -76,7 +76,7 @@ Go to https://zabbix-box/hosts.php?form=create:
         * Connect to: `DNS`
         * Port: `10050`
 * Under tab `Templates`:
-    * Add `Template OS Linux by Zabbix agent`, can be found in host group `Templates/Operating systems`.
+    * Add `Template OS Linux by Zabbix agent active`, can be found in host group `Templates/Operating systems`.
 
 
 ## Allow Guests to view graphs and screens
