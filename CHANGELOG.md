@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.2](https://github.com/extra2000/zabbix-box/compare/v1.2.1...v1.2.2) (2021-03-08)
+
+
+### Documentations
+
+* **README:** Change agent instructions to add active check template instead of passive check template ([1028f63](https://github.com/extra2000/zabbix-box/commit/1028f63ee83ee4669dac01a1f530f86c1ff9e7a1))
+
 ### [1.2.1](https://github.com/extra2000/zabbix-box/compare/v1.2.0...v1.2.1) (2021-03-07)
 
 
