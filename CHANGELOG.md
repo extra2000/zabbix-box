@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.4.0](https://github.com/extra2000/zabbix-box/compare/v1.3.0...v1.4.0) (2021-03-14)
+
+
+### Features
+
+* **submodule:** Update `nginx-formula` to [v2.0.0](https://github.com/extra2000/nginx-formula/releases/tag/v2.0.0) ([d35e055](https://github.com/extra2000/zabbix-box/commit/d35e055d975901431cde679db4efb1271da9530b))
+* **submodule:** Update `zabbix-formula` to [v2.0.0](https://github.com/extra2000/zabbix-formula/releases/tag/v2.0.0) ([68d1b1a](https://github.com/extra2000/zabbix-box/commit/68d1b1a0b8e77a3362ae5309685cd04f95149083))
+
+
+### Documentations
+
+* **README:** Update `README.md` prior to NGINX deployment via Podman ([5c96772](https://github.com/extra2000/zabbix-box/commit/5c9677262a083f41b0a6ae62dd718d3e2b00903e))
+
+
+### Continuous Integrations
+
+* **AppVeyor:** Using HTTPS example for `nginx-formula` to avoid state fail ([cb44f1b](https://github.com/extra2000/zabbix-box/commit/cb44f1b1d378506054f73e1ea99cdf679ecc6f67))
+
 ## [1.3.0](https://github.com/extra2000/zabbix-box/compare/v1.2.2...v1.3.0) (2021-03-14)
 
 
