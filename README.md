@@ -38,9 +38,13 @@ $ vagrant ssh zabbix-box -- sudo salt-call state.highstate
 Deploy Zabbix Server, Web, Agent, and Postgres containers:
 ```
 $ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.config
-$ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.config.nginx
 $ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.service.postgres
 $ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.service.server
+```
+
+Configure and deploy NGINX for HTTPS:
+```
+$ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.config.nginx,nginx.service
 ```
 
 To access Zabbix web, go to https://zabbix-box. Use the following default username and password:
