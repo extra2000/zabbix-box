@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.3.0](https://github.com/extra2000/zabbix-box/compare/v1.2.2...v1.3.0) (2021-03-14)
+
+
+### Features
+
+* **submodule:** Update `zabbix-formula` to [v1.3.0](https://github.com/extra2000/zabbix-formula/releases/tag/v1.3.0) ([f6c0b15](https://github.com/extra2000/zabbix-box/commit/f6c0b15a5307ae83f24e44e8a76eec8305d26298))
+
+
+### Documentations
+
+* **pillar/zabbix.sls.example:** Add example how to create `bridge` pod network ([68fd01e](https://github.com/extra2000/zabbix-box/commit/68fd01e8455425941129582762a667fc97d37f88))
+
+
+### Fixes
+
+* **/etc/minion:** Using new style for `module.run` ([0209956](https://github.com/extra2000/zabbix-box/commit/02099563526f0684c1f94845f4bd888217c39f0c))
+
 ### [1.2.2](https://github.com/extra2000/zabbix-box/compare/v1.2.1...v1.2.2) (2021-03-08)
 
 
