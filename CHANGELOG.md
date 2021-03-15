@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/extra2000/zabbix-box/compare/v1.4.0...v1.5.0) (2021-03-15)
+
+
+### Features
+
+* **submodule:** Upgrade `zabbix-formula` to version [v2.1.0](https://github.com/extra2000/zabbix-formula/releases/tag/v2.1.0) ([bf9fbb6](https://github.com/extra2000/zabbix-box/commit/bf9fbb6cb678869aa5dd1b32ea5ad2f70868b9cb))
+
 ## [1.4.0](https://github.com/extra2000/zabbix-box/compare/v1.3.0...v1.4.0) (2021-03-14)
 
 
