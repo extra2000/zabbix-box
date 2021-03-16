@@ -64,13 +64,46 @@ Go to `Administration` > `General` > `Macros`, add the following macros:
 
 ## Slack Notifications
 
-Visit https://api.slack.com and then create an app with the following `Bot Token Scopes`:
-* `incoming-webhook`
-* `chat:write.public`
-* `chat:write.customize`
+Visit https://api.slack.com and then create an app, for example named `myzabbix-bot`, with the following `Bot Token Scopes`:
 * `chat:write`
 
-On your `zabbix-box` web-page, go to `Administration` > `Media types` > `Slack` and set `bot_token` value using your apps `OAuth Access Token` ("`xoxp-...`").
+On your Slack workspace, create a Slack channel for the Zabbix notification, for example `#zabbix`. Then, on your channel's `More options` select `Add apps` and add your bot `myzabbix-bot` into your channel.
+
+On your `zabbix-box` web-page, go to `Administration` > `Media types` > `Slack` and do the followings:
+1. Set `bot_token` value using your apps `OAuth Access Token` ("`xoxb-...`").
+1. To fix duplicated notifications due to `Slack notification failed : invalid_auth`, go to `Options` and set `Attempts` to `1`.
+
+To `test` Slack Notification, use the following values (replace `#zabbix` with your Slack channel):
+* channel: `#zabbix`
+* event_id: 1
+* event_nseverity: 1
+* event_source: 0
+* event_update_status: 0
+* event_value: 1
+* trigger_id: 1
+* zabbix_url: https://zabbix-box
+
+You may want to read the Zabbix Slack integration official documentations at https://git.zabbix.com/projects/ZBX/repos/zabbix/browse/templates/media/slack/README.md
+
+
+## Enabling Notications
+
+Make sure disable all unused `Media types` except `Slack` if you use Slack for notifications.
+
+Enable `Media` for Admin user. Go to `Administration` > `Users` > `Admin` choose `Media` and add the following media (replace `#zabbix` with your Slack channel):
+* Type: `Slack`
+* Send to: `#zabbix`
+* When active: `1-7,00:00-24:00`
+* Use if severity:
+    * [x] Not classified
+    * [x] Information
+    * [x] Warning
+    * [x] Average
+    * [x] High
+    * [x] Disaster
+* Enabled: `True`
+
+Enable `Actions`. Go to `Configuration` > `Actions` > `Trigger actions`, enable `Report problems to Zabbix administrators`.
 
 
 ## Creating Vagrant box for Agent, for testing purpose
