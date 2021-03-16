@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.6.0](https://github.com/extra2000/zabbix-box/compare/v1.5.0...v1.6.0) (2021-03-16)
+
+
+### Features
+
+* **submodule:** Update `zabbix-formula` to [v2.2.0](https://github.com/extra2000/zabbix-formula/releases/tag/v2.2.0) ([5ded5ba](https://github.com/extra2000/zabbix-box/commit/5ded5ba5b828704fcf6e94d6a4582f4cbf2e27e1))
+
+
+### Documentations
+
+* **README:** Add instructions to configure Global Macros ([52d6039](https://github.com/extra2000/zabbix-box/commit/52d6039990c0be3e6f36aa247ab191687d1ef4d0))
+* **README:** Improve instructions for Slack notifications ([8289d6c](https://github.com/extra2000/zabbix-box/commit/8289d6ca09903bc63a0f17e108d5617ec6a5f80d))
+
 ## [1.5.0](https://github.com/extra2000/zabbix-box/compare/v1.4.0...v1.5.0) (2021-03-15)
 
 
