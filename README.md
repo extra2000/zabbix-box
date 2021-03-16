@@ -54,6 +54,14 @@ To access Zabbix web, go to https://zabbix-box. Use the following default userna
 Go to [Configuration > Hosts](https://zabbix-box/hosts.php) and rename host from `Zabbix server` to `zabbix-server-pod`.
 
 
+## Configure Global Macros
+
+Go to `Administration` > `General` > `Macros`, add the following macros:
+| Macro | Value |
+| --- | --- |
+| `{$ZABBIX.URL}` | https://zabbix-box |
+
+
 ## Slack Notifications
 
 Visit https://api.slack.com and then create an app with the following `Bot Token Scopes`:
