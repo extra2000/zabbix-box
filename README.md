@@ -71,6 +71,7 @@ On your Slack workspace, create a Slack channel for the Zabbix notification, for
 
 On your `zabbix-box` web-page, go to `Administration` > `Media types` > `Slack` and do the followings:
 1. Set `bot_token` value using your apps `OAuth Access Token` ("`xoxb-...`").
+1. Set `slack_mode` value to `event` because Zabbix seems unable to reply to a message.
 1. To fix duplicated notifications due to `Slack notification failed : invalid_auth`, go to `Options` and set `Attempts` to `1`.
 
 To `test` Slack Notification, use the following values (replace `#zabbix` with your Slack channel):
