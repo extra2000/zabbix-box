@@ -22,6 +22,7 @@ Copy example pillar file for Zabbix and NGINX. Optionally you may want to edit t
 ```
 $ cp -v salt/roots/pillar/zabbix.sls.example salt/roots/pillar/zabbix.sls
 $ cp -v salt/roots/pillar/nginx.sls.example salt/roots/pillar/nginx.sls
+$ cp -v salt/roots/pillar/zabbix-agent.sls.example salt/roots/pillar/zabbix-agent.sls
 ```
 
 Copy vagrant file from `vagrant/examples/` and then create the vagrant box (you can change to `--provider=libvirt` if you want to use Libvirt provider):
@@ -40,6 +41,7 @@ Deploy Zabbix Server, Web, Agent, and Postgres containers:
 $ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.config
 $ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.service.postgres
 $ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.service.server
+$ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix_agent
 ```
 
 Configure and deploy NGINX for HTTPS:
@@ -50,8 +52,6 @@ $ vagrant ssh zabbix-box -- sudo salt-call state.sls zabbix.config.nginx,nginx.s
 To access Zabbix web, go to https://zabbix-box. Use the following default username and password:
 * Username: `Admin`
 * Password: `zabbix`
-
-Go to [Configuration > Hosts](https://zabbix-box/hosts.php) and rename host from `Zabbix server` to `zabbix-server-pod`.
 
 
 ## Configure Global Macros
