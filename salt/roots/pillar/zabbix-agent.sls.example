@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+zabbix_agent:
+  lookup:
+    hostuser:
+      name: vagrant
+      group: vagrant
+    storage_devices:
+      - /dev/vda
+    storage_mounts:
+      - name: rootfs
+        host_path: /
+        container_path: /rootfs
+    config:
+      hostname: Zabbix server
+      start_agents: 3
+      zabbix_server:
+        host: 127.0.0.1
+        port: 10051
+      passive_check: true
+      active_check: true
