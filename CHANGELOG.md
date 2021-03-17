@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.0](https://github.com/extra2000/zabbix-box/compare/v1.6.0...v2.0.0) (2021-03-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **submodule:** Pillar format for `salt/roots/pillar/zabbix.sls.example` has changed and Zabbix server is now using host networking.
+
+### Features
+
+* **submodule:** Add update [zabbix-agent-formula v4.0.0](https://github.com/extra2000/zabbix-agent-formula/releases/tag/v4.0.0) ([1e05731](https://github.com/extra2000/zabbix-box/commit/1e05731fec26729aaaa02055029289dfd95538e3))
+* **submodule:** Update `zabbix-formula` to [v3.0.0](https://github.com/extra2000/zabbix-formula/releases/tag/v3.0.0) ([4941ee5](https://github.com/extra2000/zabbix-box/commit/4941ee5276de585316d3cf30231139347d6ff37b))
+
+
+### Documentations
+
+* **README:** Add instruction to set `slack_mode` value to `event` ([62f44ec](https://github.com/extra2000/zabbix-box/commit/62f44ec5d1a94cc1a0c5858237764167113fe38f))
+* **README:** Update instructions because using `zabbix-agent-formula` ([43a569d](https://github.com/extra2000/zabbix-box/commit/43a569d59b5a80385f39939d1f3dbb976ee954a2))
+* **vagrant:** Fix port forwarding mistakes. Zabbix server actually listen to port `10051` by default, not port `10050`. Only agents listen to port `10050` ([2180a29](https://github.com/extra2000/zabbix-box/commit/2180a29578edfdd360485b90a698076c37625008))
+
 ## [1.6.0](https://github.com/extra2000/zabbix-box/compare/v1.5.0...v1.6.0) (2021-03-16)
 
 
