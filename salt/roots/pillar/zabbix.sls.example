@@ -34,6 +34,7 @@ zabbix:
         dbname: zabbix
         username: zabbixuser
         password: abcde12345
+      timezone: Asia/Kuala_Lumpur
       server:
         ip: 127.0.0.1
         port: 10051
