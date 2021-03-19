@@ -124,6 +124,7 @@ Go to https://zabbix-box/hosts.php?form=create:
 * Under tab `Templates`:
     * Add `Template OS Linux by Zabbix agent active`, can be found in host group `Templates/Operating systems`.
 
+Note that when using `agent active`, Zabbix server will query metrics from agent's port `10050`. If the agent is behind firewall or NAT, use passive agent template `Template OS Linux by Zabbix agent`.
 
 ## Allow Guests to view graphs and screens
 
