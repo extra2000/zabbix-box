@@ -31,6 +31,11 @@ $ cp -v vagrant/examples/Vagrantfile.zabbix-box.fedora-33.x86_64.example vagrant
 $ vagrant up --provider=virtualbox
 ```
 
+Set vagrant box timezone (use `$ vagrant ssh zabbix-box -- timedatectl list-timezones` to get a list of available continents and regions):
+```
+$ vagrant ssh zabbix-box -- sudo timedatectl set-timezone [CONTINENT/REGION]
+```
+
 Provision the vagrant box:
 ```
 $ vagrant ssh zabbix-box -- sudo salt-call state.highstate
